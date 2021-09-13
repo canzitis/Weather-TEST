@@ -95,7 +95,7 @@ export const deActivateSearchCityMod = () => {
 }
 
 export const activateMetricMode = (metricMode) => {
-    debugger;
+    
     return {
         type: CHANGE_METRIC_MODE,
         metricMode

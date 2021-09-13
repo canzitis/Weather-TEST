@@ -7,6 +7,7 @@ import {
   activateMetricMode,
 } from "../../Redux/weather-reducer";
 import React from "react";
+import Preloader from "../Preloader/Preloader";
 
 class SearchWeatherContainer extends React.Component {
   componentDidMount() {
@@ -27,15 +28,11 @@ class SearchWeatherContainer extends React.Component {
     this.props.getWeather(this.props.city, metric);
     this.props.activateMetricMode(metricMode);
   };
+
   render() {
     if (!this.props.city) {
-      return (
-        <div>
-          <h4>ЗАГРУЗКА</h4>
-        </div>
-      );
+      return <Preloader />;
     }
-
     return (
       <SearchWeather
         {...this.props}

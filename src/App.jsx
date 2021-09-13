@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="container">
-        <Route patch="" render={() => <SearchWeatherContainer />} />
+        <Route patch="/weather" render={() => <SearchWeatherContainer />} />
       </div>
     </div>
   );

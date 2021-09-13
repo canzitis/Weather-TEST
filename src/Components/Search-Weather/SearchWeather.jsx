@@ -5,10 +5,9 @@ import React, { useState } from "react";
 import WeatherPictures from "./WeatherPictures";
 
 const SearchWeather = (props) => {
-  debugger;
   const str = props.weather.weather[0].description,
     newStr = str[0].toUpperCase() + str.slice(1);
-
+   
   return (
     <div>
       <div className={s.header}>
