@@ -1,14 +1,49 @@
 import SearchWeather from "./SearchWeather";
 import { connect } from "react-redux";
-import { getWeather } from "../../Redux/weather-reducer";
+import {
+  getWeather,
+  activateSearchCityMod,
+  deActivateSearchCityMod,
+  activateMetricMode,
+} from "../../Redux/weather-reducer";
 import React from "react";
 
 class SearchWeatherContainer extends React.Component {
   componentDidMount() {
     this.props.getWeather();
   }
+
+  activateSearchCity = () => {
+    this.props.activateSearchCityMod();
+  };
+
+  deActivateSearchCity = (city) => {
+    this.props.getWeather(city);
+    this.props.deActivateSearchCityMod();
+  };
+
+  setChangeMetric = (metric, metricMode) => {
+    debugger;
+    this.props.getWeather(this.props.city, metric);
+    this.props.activateMetricMode(metricMode);
+  };
   render() {
-    return <SearchWeather {...this.props} getWeather={getWeather} />;
+    if (!this.props.city) {
+      return (
+        <div>
+          <h4>ЗАГРУЗКА</h4>
+        </div>
+      );
+    }
+
+    return (
+      <SearchWeather
+        {...this.props}
+        activateSearchCity={this.activateSearchCity}
+        deActivateSearchCity={this.deActivateSearchCity}
+        setChangeMetric={this.setChangeMetric}
+      />
+    );
   }
 }
 
@@ -16,8 +51,14 @@ const mapStateToProps = (state) => {
   return {
     weather: state.weatherReducerPage.weather,
     city: state.weatherReducerPage.city,
-    measurement: state.weatherReducerPage.measurement,
+    metricMode: state.weatherReducerPage.metricMode,
+    searchCityMode: state.weatherReducerPage.searchCityMode,
   };
 };
 
-export default connect(mapStateToProps, { getWeather })(SearchWeatherContainer);
+export default connect(mapStateToProps, {
+  getWeather,
+  activateSearchCityMod,
+  deActivateSearchCityMod,
+  activateMetricMode,
+})(SearchWeatherContainer);

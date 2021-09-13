@@ -1,49 +1,82 @@
 import s from "../Search-Weather/SearchWeather.module.css";
 import locationImg from "../../img/location.png";
 import SearchCity from "../Search-City/SearchCity";
-import React from "react";
+import React, { useState } from "react";
+import WeatherPictures from "./WeatherPictures";
 
 const SearchWeather = (props) => {
   debugger;
-
-  if (!props.city) {
-    return (
-      <div>
-        <h4>ЗАГРУЗКА</h4>
-      </div>
-    );
-  }
+  const str = props.weather.weather[0].description,
+    newStr = str[0].toUpperCase() + str.slice(1);
 
   return (
     <div>
       <div className={s.header}>
-        <div className={s.city}>
-          <span className={s.cityName}>{props.city}</span>
-
-          <div className={s.cityСhangeAndlocationBox}>
-            <button className={s.cityСhange}>Сменить город</button>
-            <div className={s.location}>
-              <img src={locationImg} alt="" />
-              <span>Мое местоположение</span>
+        {props.searchCityMode ? (
+          <div className={s.searcCity}>
+            <SearchCity {...props} />
+          </div>
+        ) : (
+          <div className={s.city}>
+            <span className={s.cityName}>{props.city}</span>
+            <div className={s.cityСhangeAndlocationBox}>
+              <button
+                onClick={() => props.activateSearchCity()}
+                className={s.cityСhange}
+              >
+                Сменить город
+              </button>
+              <div className={s.location}>
+                <img src={locationImg} alt="" />
+                <span>Мое местоположение</span>
+              </div>
             </div>
           </div>
-          <div className={s.searcCity}>
-            <SearchCity />
-            <button>Выбрать</button>
-          </div>
-        </div>
+        )}
         <div className={s.boxTemper}>
           <span>º</span>
-          <div className={s.boxTemperButton}>
-            <button>C</button>
-            <button>F</button>
+          <div>
+            {props.metricMode ? (
+              <div className={s.boxTemperButton}>
+                <button
+                  onClick={() => props.setChangeMetric("metric", true)}
+                  className={s.activeButtonMetric}
+                >
+                  C
+                </button>
+                <button
+                  onClick={() => props.setChangeMetric("imperial", false)}
+                  className={s.deactiveButtonMetric}
+                >
+                  F
+                </button>
+              </div>
+            ) : (
+              <div className={s.boxTemperButton}>
+                <button
+                  onClick={() => props.setChangeMetric("metric", true)}
+                  className={s.deactiveButtonMetric}
+                >
+                  C
+                </button>
+                <button
+                  onClick={() => props.setChangeMetric("imperial", false)}
+                  className={s.activeButtonMetric}
+                >
+                  F
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
       <body>
         <div className={s.wather}>
-          <img src="" alt="" />
-          <span></span>
+          <div className={s.imgAndTempBox}>
+            <WeatherPictures {...props} />
+            <h4>{Math.round(props.weather.main.temp)}°</h4>
+          </div>
+          <span>{newStr}</span>
         </div>
       </body>
       <footer>

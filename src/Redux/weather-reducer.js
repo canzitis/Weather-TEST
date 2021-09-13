@@ -5,12 +5,16 @@ import {
 const SET_WEATHER = 'SET_WEATHER'
 const SET_MEASUREMENT = 'SET_MEASUREMENT'
 const SET_CITY = 'SET_CITY'
+const ACTIVATE_SEARCH_CITY_MODE = "ACTIVATE_SEARCH_CITY_MODE"
+const DE_ACTIVATE_SEARCH_CITY_MODE = "DE_ACTIVATE_SEARCH_CITY_MODE"
+const CHANGE_METRIC_MODE = "CHANGE_METRIC_MODE"
 
 
 const instalState = {
     weather: null,
     city: null,
-    measurement: null
+    metricMode: true,
+    searchCityMode: false
 }
 
 const weatherReducer = (state = instalState, action) => {
@@ -31,8 +35,24 @@ const weatherReducer = (state = instalState, action) => {
                         ...state,
                         city: action.newCity,
                     }
-                    default:
-                        return state
+                    case ACTIVATE_SEARCH_CITY_MODE:
+                        return {
+                            ...state,
+                            searchCityMode: true,
+                        }
+
+                        case DE_ACTIVATE_SEARCH_CITY_MODE:
+                            return {
+                                ...state,
+                                searchCityMode: false,
+                            }
+                            case CHANGE_METRIC_MODE:
+                                return {
+                                    ...state,
+                                    metricMode: action.metricMode,
+                                }
+                                default:
+                                    return state
     }
 }
 
@@ -61,6 +81,28 @@ export const changeCity = (newCity) => {
 }
 
 
+export const activateSearchCityMod = () => {
+    return {
+        type: ACTIVATE_SEARCH_CITY_MODE,
+    }
+}
+
+
+export const deActivateSearchCityMod = () => {
+    return {
+        type: DE_ACTIVATE_SEARCH_CITY_MODE,
+    }
+}
+
+export const activateMetricMode = (metricMode) => {
+    debugger;
+    return {
+        type: CHANGE_METRIC_MODE,
+        metricMode
+    }
+}
+
+
 
 
 export const getWeather = (city = "Воронеж", measurement = 'metric') => {
@@ -70,7 +112,6 @@ export const getWeather = (city = "Воронеж", measurement = 'metric') => {
             dispatch(setStartIndex(data.data))
         }
     }
-
 }
 
 

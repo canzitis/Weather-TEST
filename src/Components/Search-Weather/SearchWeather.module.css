@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   margin-top: 75px;
+  height: 50px;
+  align-items: center;
 }
 
 .city{
@@ -36,7 +38,6 @@ flex-direction: column;
 
 .cityСhange:hover{
   cursor: pointer;
-  
 }
 
 .location{
@@ -97,23 +98,28 @@ flex-direction: column;
 
 
 .boxTemperButton button {
-  background: unset;
+ 
   border: none;
   width: 100%;
 
-font-family: Lato;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 22px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
 
-color: #FFFFFF;
+  color: #FFFFFF;
 
-mix-blend-mode: normal;
-opacity: 0.4;
+  mix-blend-mode: normal;
+  
 }
 
-.boxTemperButton button:focus,.boxTemperButton button:hover{
+.deactiveButtonMetric{
+  opacity: 0.4;
+  background: unset;
+}
+
+.boxTemperButton button:hover{
   color: #FFFFFF;
   cursor: pointer;
   mix-blend-mode: normal;
@@ -121,11 +127,13 @@ opacity: 0.4;
   background: rgba(255, 255, 255, 0.2);
 }
 
+.activeButtonMetric {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .searcCity{
-  margin-top: 20px;
-  display: none;
-  flex-direction: column;
-  align-items: flex-end;
+  width: 300px;
 }
 
 .searcCity button{
@@ -143,10 +151,89 @@ opacity: 0.4;
 .stateWeather{
   display: flex;
   justify-content: space-between;
+  margin-top: 150px;
 }
 
 
 .stateWeatherItem{
   display: flex;
   flex-direction: column;
+}
+
+.wather{
+  margin:  0 auto;
+  margin-top: 180px ;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+
+.wather span{
+  height: 48px;
+  left: 101px;
+  right: 125px;
+
+  
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  
+  color: #FFFFFF;
+}
+
+.wather img{
+  width: 200px;
+  height: 200px;
+}
+
+.imgAndTempBox{
+  display: flex;
+  align-items: center;
+}
+
+.imgAndTempBox h4{
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 170px;
+  margin: 0;
+
+  color: #FFFFFF;
+}
+
+
+.stateWeather h3{
+
+  height: 22px;
+
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.stateWeather span{
+
+  height: 30px;
+
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #FFFFFF;
 }
