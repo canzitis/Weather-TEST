@@ -101,6 +101,7 @@ const SearchWeather = (props) => {
           </div>
         </div>
       </footer>
+      
     </div>
   );
 };

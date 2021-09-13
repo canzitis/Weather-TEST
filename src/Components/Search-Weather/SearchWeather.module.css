@@ -237,3 +237,46 @@ flex-direction: column;
 
   color: #FFFFFF;
 }
+
+
+
+
+@media(max-width:650px){
+
+
+  .stateWeather{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:  repeat(2,50px);
+    grid-row-gap: 10px;
+    justify-items: center;
+  
+    margin-bottom: 30px;
+    }
+
+    .stateWeather h3
+    {
+      margin:  0;
+    }
+}
+
+
+@media(max-width:450px){
+  .container{
+    max-width: 300px;
+  }
+
+  .imgAndTempBox h4{
+    font-size: 100px;
+  }
+
+  .wather span{
+    font-size: 35px;
+  }
+
+  .wather img{
+    width: 150px;
+    height: 150px;
+  }
+  
+}
