@@ -1,0 +1,152 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 75px;
+}
+
+.city{
+display: flex;
+flex-direction: column;
+}
+
+
+.cityСhangeAndlocationBox{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.cityСhange{
+  background: unset;
+  border: none;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-right: 50px;
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.cityСhange:hover{
+  cursor: pointer;
+  
+}
+
+.location{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.location img{
+  width: 30px;
+  height: 30px;
+}
+
+.cityName {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 60px;
+  color: #FFFFFF;
+}
+
+.boxTemper{
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxTemperButton{
+  display: flex;
+  justify-content: space-evenly;
+  width:80px;
+  height: 30px;
+  mix-blend-mode: normal;
+
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.boxTemper span{
+  color: white;
+  width: 8px;
+  height: 22px;
+}
+
+
+.boxTemperButton button {
+  background: unset;
+  border: none;
+  width: 100%;
+
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+opacity: 0.4;
+}
+
+.boxTemperButton button:focus,.boxTemperButton button:hover{
+  color: #FFFFFF;
+  cursor: pointer;
+  mix-blend-mode: normal;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.searcCity{
+  margin-top: 20px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.searcCity button{
+  width: 80px;
+  height: 20px;
+  margin-top: 10px;
+  border-radius: 25px;
+  border: none;
+}
+
+.searcCity button:hover{
+ cursor: pointer;
+}
+
+.stateWeather{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.stateWeatherItem{
+  display: flex;
+  flex-direction: column;
+}

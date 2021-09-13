@@ -1,0 +1,20 @@
+body{
+  background: #498CEC;
+
+
+}
+
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
