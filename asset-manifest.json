@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Weather-TEST/static/css/main.12f7f245.chunk.css",
-    "main.js": "/Weather-TEST/static/js/main.ea9b0382.chunk.js",
-    "main.js.map": "/Weather-TEST/static/js/main.ea9b0382.chunk.js.map",
-    "runtime-main.js": "/Weather-TEST/static/js/runtime-main.2e2a6fc2.js",
-    "runtime-main.js.map": "/Weather-TEST/static/js/runtime-main.2e2a6fc2.js.map",
-    "static/js/2.2e8839a4.chunk.js": "/Weather-TEST/static/js/2.2e8839a4.chunk.js",
-    "static/js/2.2e8839a4.chunk.js.map": "/Weather-TEST/static/js/2.2e8839a4.chunk.js.map",
-    "static/js/3.8f78708a.chunk.js": "/Weather-TEST/static/js/3.8f78708a.chunk.js",
-    "static/js/3.8f78708a.chunk.js.map": "/Weather-TEST/static/js/3.8f78708a.chunk.js.map",
+    "main.css": "/Weather-TEST/static/css/main.ab571138.chunk.css",
+    "main.js": "/Weather-TEST/static/js/main.1fe09e06.chunk.js",
+    "main.js.map": "/Weather-TEST/static/js/main.1fe09e06.chunk.js.map",
+    "runtime-main.js": "/Weather-TEST/static/js/runtime-main.56329df6.js",
+    "runtime-main.js.map": "/Weather-TEST/static/js/runtime-main.56329df6.js.map",
+    "static/js/2.dcdac832.chunk.js": "/Weather-TEST/static/js/2.dcdac832.chunk.js",
+    "static/js/2.dcdac832.chunk.js.map": "/Weather-TEST/static/js/2.dcdac832.chunk.js.map",
+    "static/js/3.b71324d9.chunk.js": "/Weather-TEST/static/js/3.b71324d9.chunk.js",
+    "static/js/3.b71324d9.chunk.js.map": "/Weather-TEST/static/js/3.b71324d9.chunk.js.map",
     "index.html": "/Weather-TEST/index.html",
-    "static/css/main.12f7f245.chunk.css.map": "/Weather-TEST/static/css/main.12f7f245.chunk.css.map",
-    "static/js/2.2e8839a4.chunk.js.LICENSE.txt": "/Weather-TEST/static/js/2.2e8839a4.chunk.js.LICENSE.txt",
+    "static/css/main.ab571138.chunk.css.map": "/Weather-TEST/static/css/main.ab571138.chunk.css.map",
+    "static/js/2.dcdac832.chunk.js.LICENSE.txt": "/Weather-TEST/static/js/2.dcdac832.chunk.js.LICENSE.txt",
     "static/media/cloud.79bcce60.png": "/Weather-TEST/static/media/cloud.79bcce60.png",
     "static/media/preloader-img.de11cc0a.gif": "/Weather-TEST/static/media/preloader-img.de11cc0a.gif",
     "static/media/rain.8efbf077.png": "/Weather-TEST/static/media/rain.8efbf077.png",
     "static/media/strom.6a3456b5.png": "/Weather-TEST/static/media/strom.6a3456b5.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2e2a6fc2.js",
-    "static/js/2.2e8839a4.chunk.js",
-    "static/css/main.12f7f245.chunk.css",
-    "static/js/main.ea9b0382.chunk.js"
+    "static/js/runtime-main.56329df6.js",
+    "static/js/2.dcdac832.chunk.js",
+    "static/css/main.ab571138.chunk.css",
+    "static/js/main.1fe09e06.chunk.js"
   ]
 }
