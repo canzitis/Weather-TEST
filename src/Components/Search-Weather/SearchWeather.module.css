@@ -28,7 +28,7 @@ flex-direction: column;
 .cityСhange{
   background: unset;
   border: none;
-
+  text-align: center;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
@@ -44,6 +44,8 @@ flex-direction: column;
 
 .cityСhange:hover{
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
 }
 
 .location{
