@@ -362,4 +362,8 @@ flex-direction: column;
     flex-direction: column;
   }
   
+  .stateWeather{
+    margin-top: 30px;
+  }
+  
 }
