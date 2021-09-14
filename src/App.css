@@ -39,6 +39,9 @@ body{
   .container{
     max-width: 480px;
   }
+  body{
+    background: #7290B9;
+  }
 }
 
 

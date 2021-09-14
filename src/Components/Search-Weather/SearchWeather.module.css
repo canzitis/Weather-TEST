@@ -22,7 +22,6 @@ flex-direction: column;
 
 .weatherDataBlock{
   display: flex;
-  
   justify-content: space-between;
 }
 
@@ -300,8 +299,9 @@ flex-direction: column;
   .stateWeather{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2 1fr) ;
     grid-row-gap: 10px;
-  
+    
     margin-bottom: 30px;
     }
 
@@ -347,11 +347,17 @@ flex-direction: column;
   .stateWeatherItem span{
     word-wrap: break-word;
     font-size:20px;
+    line-height: 20px;
   }
   
   .stateWeatherItem h3{
     word-wrap: break-word;
     font-size:16px;
+  }
+
+
+  .weatherDataBlock{
+    flex-direction: column;
   }
   
 }
