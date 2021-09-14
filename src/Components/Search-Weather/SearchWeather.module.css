@@ -1,7 +1,6 @@
 .header{
   display: flex;
   justify-content: space-between;
-  margin-top: 75px;
   height: 50px;
   align-items: center;
 }
@@ -18,6 +17,19 @@ flex-direction: column;
   align-items: center;
 }
 
+
+.displayGrid{
+  display: grid;
+  height: 100%;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3,300px);
+}
+
+.weatherDataBlock{
+  display: flex;
+  justify-content: space-between;
+}
 
 .cityСhange{
   background: unset;
@@ -149,9 +161,10 @@ flex-direction: column;
 }
 
 .stateWeather{
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
+
 }
 
 
@@ -160,9 +173,14 @@ flex-direction: column;
   flex-direction: column;
 }
 
+
+.stateWeatherItem h3{
+  padding-right: 10px;
+}
+
 .wather{
   margin:  0 auto;
-  margin-top: 180px ;
+
   display: flex;
   flex-direction: column;
   align-items:center;

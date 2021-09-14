@@ -1,15 +1,17 @@
 import s from "../Search-Weather/SearchWeather.module.css";
 import locationImg from "../../img/location.png";
 import SearchCity from "../Search-City/SearchCity";
-import React, { useState } from "react";
+import React from "react";
 import WeatherPictures from "./WeatherPictures";
+import DirectionWind from "../DirectionWind/DirectionWind";
 
 const SearchWeather = (props) => {
+  debugger;
   const str = props.weather.weather[0].description,
     newStr = str[0].toUpperCase() + str.slice(1);
-   
+
   return (
-    <div>
+    <div className={s.displayGrid}>
       <div className={s.header}>
         {props.searchCityMode ? (
           <div className={s.searcCity}>
@@ -82,14 +84,14 @@ const SearchWeather = (props) => {
         <div className={s.stateWeather}>
           <div className={s.stateWeatherItem}>
             <h3>Ветер</h3>
-            <span>
-              {props.weather.wind.speed} м/с
-              {props.weather.wind.deg}
+            <span className={s.weatherDataBlock}>
+              {props.weather.wind.speed} м/с,
+              <DirectionWind {...props} />
             </span>
           </div>
           <div className={s.stateWeatherItem}>
             <h3>Давление</h3>
-            <span> {props.weather.main.pressure} мм рт.ст.</span>
+            <span>{props.weather.main.pressure} мм рт.ст.</span>
           </div>
           <div className={s.stateWeatherItem}>
             <h3>Влажность</h3>
@@ -97,11 +99,10 @@ const SearchWeather = (props) => {
           </div>
           <div className={s.stateWeatherItem}>
             <h3>Вероятность дождя</h3>
-            <span></span>
+            <span>{props.weather.clouds.all} %</span>
           </div>
         </div>
       </footer>
-      
     </div>
   );
 };

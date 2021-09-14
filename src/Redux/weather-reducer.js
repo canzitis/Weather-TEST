@@ -14,7 +14,7 @@ const instalState = {
     weather: null,
     city: null,
     metricMode: true,
-    searchCityMode: false
+    searchCityMode: false,
 }
 
 const weatherReducer = (state = instalState, action) => {
@@ -95,12 +95,13 @@ export const deActivateSearchCityMod = () => {
 }
 
 export const activateMetricMode = (metricMode) => {
-    
+
     return {
         type: CHANGE_METRIC_MODE,
         metricMode
     }
 }
+
 
 
 

@@ -24,7 +24,6 @@ class SearchWeatherContainer extends React.Component {
   };
 
   setChangeMetric = (metric, metricMode) => {
-    debugger;
     this.props.getWeather(this.props.city, metric);
     this.props.activateMetricMode(metricMode);
   };

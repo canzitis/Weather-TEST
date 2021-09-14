@@ -1,11 +1,16 @@
 body{
   background: #498CEC;
+ 
+}
 
+.App{
 
+  
 }
 
 .container{
   max-width: 1300px;
+  height: 800px;
   margin: 0 auto;
 }
 
