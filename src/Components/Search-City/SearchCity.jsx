@@ -1,6 +1,5 @@
 import React from "react";
 import Select from "react-select";
-import s from "./SearchCity.css";
 
 const SearchCity = (props) => {
   const dataCity = [

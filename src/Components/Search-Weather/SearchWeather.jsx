@@ -6,12 +6,72 @@ import WeatherPictures from "./WeatherPictures";
 import DirectionWind from "../DirectionWind/DirectionWind";
 
 const SearchWeather = (props) => {
-  debugger;
   const str = props.weather.weather[0].description,
     newStr = str[0].toUpperCase() + str.slice(1);
 
   return (
-    <div className={s.displayGrid}>
+    <div>
+      <div className={s.headerMobile}>
+        {props.searchCityMode ? (
+          <div className={s.searcCityMobile}>
+            <SearchCity {...props} />
+          </div>
+        ) : (
+          <div className={s.blokHeaderMobile}>
+            <div className={s.blokLine1Mobile}>
+              <span className={s.cityName}>{props.city}</span>
+              <div className={s.boxTemper}>
+                <span>º</span>
+                <div>
+                  {props.metricMode ? (
+                    <div className={s.boxTemperButton}>
+                      <button
+                        onClick={() => props.setChangeMetric("metric", true)}
+                        className={s.activeButtonMetric}
+                      >
+                        C
+                      </button>
+                      <button
+                        onClick={() => props.setChangeMetric("imperial", false)}
+                        className={s.deactiveButtonMetric}
+                      >
+                        F
+                      </button>
+                    </div>
+                  ) : (
+                    <div className={s.boxTemperButton}>
+                      <button
+                        onClick={() => props.setChangeMetric("metric", true)}
+                        className={s.deactiveButtonMetric}
+                      >
+                        C
+                      </button>
+                      <button
+                        onClick={() => props.setChangeMetric("imperial", false)}
+                        className={s.activeButtonMetric}
+                      >
+                        F
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+            <div className={s.cityСhangeAndlocationBox}>
+              <button
+                onClick={() => props.activateSearchCity()}
+                className={s.cityСhange}
+              >
+                Сменить город
+              </button>
+              <div className={s.location}>
+                <img src={locationImg} alt="" />
+                <span>Мое местоположение</span>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
       <div className={s.header}>
         {props.searchCityMode ? (
           <div className={s.searcCity}>
